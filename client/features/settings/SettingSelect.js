@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSettings } from './settingSelectSlice';
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SettingSelect = () => {
-  const [settingName, setSettingName] = useState('test');
-
   const settingsArray = useSelector(state => state.settingSelect.settings);
   const status = useSelector(state => state.settingSelect.status);
 

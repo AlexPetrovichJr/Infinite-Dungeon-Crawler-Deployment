@@ -1,40 +1,39 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
   settings: [],
-  status: "idle",
+  status: 'idle',
 };
 
 export const fetchSettings = createAsyncThunk(
-  "settingSelect/fetchSettings",
+  'settingSelect/fetchSettings',
   async () => {
-    let { data } = await axios.get("/api/settings");
+    let { data } = await axios.get('/api/settings');
     return data;
   }
 );
 
 export const settingSelectSlice = createSlice({
-  name: "settingSelect",
+  name: 'settingSelect',
   initialState,
   reducers: {
     setSettings: (state, action) => {
-      console.log(action);
       state.settings = action.payload;
     },
   },
 
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
-      .addCase(fetchSettings.pending, (state) => {
-        console.log("Promise Pending");
-        state.status = "loading";
+      .addCase(fetchSettings.pending, state => {
+        console.log('Promise Pending');
+        state.status = 'loading';
       })
       .addCase(fetchSettings.fulfilled, (state, action) => {
-        console.log("Promise Fulfilled:", action);
+        console.log('Promise Fulfilled:', action);
 
         state.settings = action.payload; // set the settings to the value from my fetch
-        state.status = "idle";
+        state.status = 'idle';
       });
   },
 });

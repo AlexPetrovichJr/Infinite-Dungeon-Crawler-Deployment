@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const About = () => {
   return (
-    <div id="about-container">
-      <div id="about-info">
+    <div id='about-container'>
+      <div id='about-info'>
         <h1>Welcome to Infinite Dungeon Crawler</h1>
         <p>
           This is an AI text adventure game created by 4 programmers, Steffan

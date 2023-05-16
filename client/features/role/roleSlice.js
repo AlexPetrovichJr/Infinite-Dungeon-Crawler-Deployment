@@ -4,12 +4,8 @@ import axios from 'axios';
 export const fetchRoles = createAsyncThunk(
   'roleSelect/fetchRoles',
   async settingID => {
-    try {
-      const { data } = await axios.get(`/api/roles/${settingID}`);
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
+    const { data } = await axios.get(`/api/roles/${settingID}`);
+    return data;
   }
 );
 
