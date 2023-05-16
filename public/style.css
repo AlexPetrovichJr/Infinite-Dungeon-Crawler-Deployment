@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 /* SITE WIDE STYLING */
 body {
   margin: 0;
-  font-family: "VT323";
+  font-family: 'VT323';
   background-color: #121212;
   color: #dadada;
   font-size: 1.8rem;
@@ -43,7 +43,7 @@ nav a {
 #logout-btn {
   color: #dadada;
   background-color: #121212;
-  font-family: "VT323";
+  font-family: 'VT323';
   border: none;
   font-size: 1.5rem;
   margin-top: 20px;
@@ -187,7 +187,7 @@ ul {
 }
 
 #input-field input {
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
   width: 60%;
   font-size: 1.5rem;
   color: #dadada;
@@ -225,7 +225,7 @@ ul {
 }
 
 #login-signup input {
-  font-family: "VT323";
+  font-family: 'VT323';
   font-size: 1.5rem;
   color: #dadada;
   background-color: #121212;
@@ -236,7 +236,7 @@ ul {
 }
 
 #login-signup button {
-  font-family: "VT323";
+  font-family: 'VT323';
   font-size: 1.5rem;
   color: #dadada;
   background-color: #121212;
