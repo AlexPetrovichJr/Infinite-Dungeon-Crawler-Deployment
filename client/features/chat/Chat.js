@@ -11,6 +11,10 @@ const Chat = () => {
   const [messageHistory, setMessageHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const chatScrollEnd = useRef(null);
+  // const[song, setSong] = useState
+  // if (setting === 'cyberpunk') {
+  //   setSong('/Internet-Dungeon-Crawler/public/song1.mp3')
+  // }
 
   useEffect(() => {
     const sendInitialScenario = async () => {
@@ -122,3 +126,9 @@ const Chat = () => {
 };
 
 export default Chat;
+
+
+{/* <audio controls loop autoplay id="myAudio">
+  <setSong type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio> */}
