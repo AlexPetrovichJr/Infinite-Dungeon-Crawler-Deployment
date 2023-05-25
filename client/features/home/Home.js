@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const messageHistory = useSelector((state) => state.messageHistory);
+
   return (
     <div id="home-container">
       <div id="home-info">
@@ -12,9 +15,15 @@ const Home = () => {
           game. Use your imagination to navigate through a captivating story
           where your decisions matter and every playthrough is unique.
         </p>
-        <Link to="/settings" id="home-play-now">
-          PLAY NOW
-        </Link>
+        {messageHistory.length > 0 ? (
+          <Link to="/continue" id="home-play-now">
+            PLAY NOW
+          </Link>
+        ) : (
+          <Link to="/settings" id="home-play-now">
+            PLAY NOW
+          </Link>
+        )}
         <Link to="/about">About</Link>
       </div>
     </div>

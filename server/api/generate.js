@@ -1,5 +1,4 @@
 const { Configuration, OpenAIApi } = require("openai");
-require("dotenv").config();
 const router = require("express").Router();
 
 const configuration = new Configuration({

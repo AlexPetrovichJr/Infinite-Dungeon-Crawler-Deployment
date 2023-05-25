@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 /* SITE WIDE STYLING */
 body {
   margin: 0;
-  font-family: 'VT323';
+  font-family: "VT323";
   background-color: #121212;
   color: #dadada;
   font-size: 1.8rem;
@@ -43,7 +43,7 @@ nav a {
 #logout-btn {
   color: #dadada;
   background-color: #121212;
-  font-family: 'VT323';
+  font-family: "VT323";
   border: none;
   font-size: 1.5rem;
   margin-top: 20px;
@@ -55,7 +55,7 @@ nav a {
 }
 
 /* COMPONENT STYLES */
-/* Could have made these classes and made just one styling for all these pages. 
+/* Could have made these classes and made just one styling for all these pages.
 But if we want individual control later over each component, we have the ability */
 
 /* ----------------------- HOME COMPONENT ----------------------- */
@@ -187,14 +187,66 @@ ul {
 }
 
 #input-field input {
-  font-family: 'VT323', monospace;
-  width: 60%;
+  font-family: "VT323", monospace;
+  width: 600px;
   font-size: 1.5rem;
   color: #dadada;
   background-color: #2c2c2c;
   padding: 10px 0px 10px 15px;
   outline: none;
   border: none;
+  margin-right: 10px;
+}
+
+#input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#quit-btn {
+  font-family: "VT323";
+  font-size: 1.8rem;
+  padding: 10px 5px;
+  color: #dadada;
+  background-color: #121212;
+  border: solid #dadada 2.5px;
+  padding: 5px;
+}
+
+#quit-btn:hover {
+  cursor: pointer;
+  color: gold;
+  border: solid gold 2.5px;
+}
+
+/* ----------------------- GUI PopUps ----------------------- */
+/* removes pop-up arrow */
+.popup-arrow {
+  display: none;
+}
+
+.guiButton {
+  border: solid #dadada 2.5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.guiButton:hover {
+  cursor: pointer;
+  color: gold;
+  border: solid gold 2.5px;
+}
+
+.popUpContainer > h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUpContainer {
+  display: inline;
 }
 
 /* ----------------------- AUTHFORM COMPONENT ----------------------- */
@@ -225,7 +277,7 @@ ul {
 }
 
 #login-signup input {
-  font-family: 'VT323';
+  font-family: "VT323";
   font-size: 1.5rem;
   color: #dadada;
   background-color: #121212;
@@ -236,7 +288,7 @@ ul {
 }
 
 #login-signup button {
-  font-family: 'VT323';
+  font-family: "VT323";
   font-size: 1.5rem;
   color: #dadada;
   background-color: #121212;
@@ -268,4 +320,26 @@ ul {
   align-items: center;
   position: relative;
   top: 30px;
+}
+
+/* ----------------------- CONTINUE COMPONENT ----------------------- */
+#continue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#continue div {
+  display: flex;
+}
+
+#continue a {
+  font-size: 2.5rem;
+}
+
+#continue span {
+  margin: 0px 15px;
+  font-size: 2.5rem;
 }
